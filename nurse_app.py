@@ -432,7 +432,7 @@ def render_waiver():
         # Uncomment line below to render the main page once the waiver has been successfully signed.
         # render_mainpage()
 
-def render_home():
+def render_menu():
     # Define the button labels
     button_labels = ["LOG AN EMOTION", "CHECK RESOURCES", "BROWSE FEED", "USER ACCOUNT"]
 
@@ -450,7 +450,7 @@ def render_home():
     elif button_clicked == "BROWSE FEED":
         st.write("You clicked BROWSE FEED!")
 
-def render_emotion_selection_page():
+def log_emotions():
 
     st.write("# Select Your Emotions")
 
@@ -548,7 +548,8 @@ def render_emotion_selection_page():
     if disappointed:
         selected_emotions.append("Disappointed")
 
-    # if next page = send list
+    if next_page:
+        return selected_emotions
 
 
 if __name__ == "__main__":
